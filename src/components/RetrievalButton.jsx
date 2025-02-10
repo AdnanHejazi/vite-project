@@ -26,7 +26,7 @@ function RetrievalButton() {
         try {
             // Format the passage query as "Book Chapter:Verse"
             const passage = (`${book} ${chapter}:${verse}`);
-            const response = await axios.get(`http://labs.bible.org/api/?passage=${passage}&formatting=plain`);
+            const response = await axios.get(`https://labs.bible.org/api/?passage=${passage}&formatting=plain`);
             
             if (!response.data.trim()) {
                 throw new Error("No verse found. Please check your input.");

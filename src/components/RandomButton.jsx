@@ -9,7 +9,7 @@ function RandomButton() {
         event.preventDefault();
 
         try {
-            const response = await axios.get( "http://labs.bible.org/api/?passage=random&formatting=plain")
+            const response = await axios.get( "https://labs.bible.org/api/?passage=random&formatting=plain")
             console.log("API Response:", response.data);
             setDisplayText(response.data);
         }
